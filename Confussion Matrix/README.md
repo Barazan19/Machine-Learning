@@ -1,6 +1,6 @@
-# 🧠 Insurance Claim Classifier - Modularized
+# 🧠 Confusion Matrix 
 
-This project demonstrates a modular approach to building a **Logistic Regression** model for insurance claim classification.
+This project demonstrates a confusion matrix using **Logistic Regression** model for insurance claim classification.
 
 ## 📁 Structure
 
@@ -17,9 +17,8 @@ Modularized_Insurance_Classifier/
 
 ## 🚀 Usage
 
-1. Place your dataset `insurance.csv` in the `data/` folder.
-2. Run `insurance_classifier_modular.py` in a Python environment.
-3. Output includes confusion matrix and classification report.
+1. Run `insurance_classifier_modular.py` in a Python environment.
+2. Output includes confusion matrix and classification report.
 
 ## 🔧 Dependencies
 
