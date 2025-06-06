@@ -42,4 +42,4 @@ This project demonstrates the fundamentals of **Linear Regression** using **Grad
 - 
 ---
 
-Made with ❤️ by [@Barazan19](https://github.com/Barazan19) — feel free to fork, star, or suggest improvements!
+Made by [@Barazan19](https://github.com/Barazan19) — feel free to fork, star, or suggest improvements!
