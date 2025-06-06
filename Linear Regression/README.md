@@ -1,96 +1,45 @@
+# 📘 Linear Regression with Gradient Descent (Real-Scale Data)
 
-# Linear Regression from Scratch using Gradient Descent
-
-This project demonstrates how to implement a simple **linear regression model** from scratch using **gradient descent**, inspired by [StatQuest's Gradient Descent Step-by-Step video](https://www.youtube.com/watch?v=sDv4f4s2SB8&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=56).
-
-We use the `insurance.csv` dataset and focus on predicting **charges** based on **age** using only **NumPy and Matplotlib**, no machine learning libraries like `scikit-learn`.
+This project demonstrates the fundamentals of **Linear Regression** using **Gradient Descent** on real insurance data. The key difference: we use the data **without normalization**, allowing for interpretation in real-world units (e.g., age in years, charges in USD).
 
 ---
 
-## 📁 Dataset
+## 🔍 Highlights
 
-- Source: `insurance.csv`
-- Columns used in this demo:
-  - `age` (independent variable)
-  - `charges` (dependent variable / target)
-
----
-
-## 🧠 What You’ll Learn
-
-1. How to **visualize data** before modeling
-2. How to define and minimize the **Mean Squared Error (MSE)**
-3. How **gradient descent** is used to update weights
-4. Visual intuition behind **loss landscape (MSE vs weight)**
+- 📈 Visualizes how the regression line fits the real-world dataset (`age` vs `charges`)
+- ⚙️ Uses gradient descent to iteratively update `w` (slope) and `b` (intercept)
+- 📉 Shows how MSE (Mean Squared Error) is minimized across epochs
+- 📊 Dual visualization per epoch:
+  - **Left plot:** Data points + current regression line
+  - **Right plot:** MSE vs `w` curve with:
+    - 🔴 Current `(w, MSE)` point
+    - 🟢 Tangent line (true slope at that point)
+    - 🔻 Historical gradient descent path
 
 ---
 
-## 🔢 Steps Breakdown
+## 📐 Why Without Normalization?
 
-### Step 1: Load and Visualize Data
-Scatter plot showing relation between age and charges.
-
-### Step 2: Define MSE and Prediction Function
-Use the formula:  
-\[
-\text{MSE} = \frac{1}{n} \sum (y_{true} - y_{pred})^2
-\]
-
-### Step 3: Implement Gradient Descent
-Update rules:
-- \( w = w - lpha \cdot \frac{dL}{dw} \)
-- \( b = b - lpha \cdot \frac{dL}{db} \)
-
-Where:
-- \( lpha \) is the learning rate
-
-### Step 4: Plot the Fitted Regression Line
-Shows how well the model fits the data after training.
-
-### Step 5: Plot the Gradient Descent Path
-Visualize the MSE as a function of weight \( w \), holding bias \( b \) fixed.  
-This helps understand how gradient descent “descends” the MSE curve.
+- Interpret the model directly:  
+  _e.g., `charges = 2603.27 × age + 2377.45`_
+- Better intuition for how learning rate needs to adapt to real value ranges
+- Easier to explain to non-technical stakeholders
 
 ---
 
-## 📊 Final Model
+## 🧪 Try It Yourself
 
-- **Final weight (slope)**: ~328.80  
-- **Final bias (intercept)**: ~21.13  
-- **Loss function**: MSE minimized using 200 epochs
-
----
-
-## 🚀 Run It Yourself
-
-Make sure you have:
-
-```bash
-pip install numpy matplotlib pandas
-```
-
-Then open the Jupyter notebook:
-
-```bash
-jupyter notebook Linear_Regression_Gradient_Descent_Updated.ipynb
-```
+- ✅ Open the notebook
+- 🔄 Use the **epoch slider** to watch the regression line and descent path update
+- 🔧 Modify learning rate (`lr`) or number of epochs to see different convergence behavior
 
 ---
 
-## 🧠 Inspiration
+## 📂 Files
 
-This notebook follows the visual intuition and clarity from Josh Starmer’s [StatQuest channel](https://www.youtube.com/user/joshstarmer).
-
+- `linear_regression_gd_real_scale.ipynb`: main notebook with visualization and slider
+- `insurance.csv`: dataset from real-world insurance data (age, charges)
+- 
 ---
 
-## 📎 Files Included
-
-- `insurance.csv` – dataset
-- `Linear_Regression_Gradient_Descent_Updated.ipynb` – full notebook
-- `README.md` – project documentation
-
----
-
-## ✅ License
-
-Feel free to use and fork this repo for learning purposes!
+Made with ❤️ by [@Barazan19](https://github.com/Barazan19) — feel free to fork, star, or suggest improvements!
