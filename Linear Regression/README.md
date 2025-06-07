@@ -55,11 +55,13 @@ To run these notebooks interactively in Google Colab, click the links above (or 
 
 ## 📷 Sample Result
 
-![Visualization](assets/sample_plot.png) <!-- Optional: You can include a screenshot here -->
+![image](https://github.com/user-attachments/assets/b3234085-d336-4413-a73c-a93c86dd3c0d)
+![image](https://github.com/user-attachments/assets/87edd1f9-5121-4f6e-a2df-2eb88c598aa8)
+
 
 ---
 
 ## 🧠 Author
 
-Made with ❤️ by [Your Name], to learn and visualize machine learning intuitively from first principles.
+Made by Barazan19, to learn and visualize machine learning intuitively from first principles.
 
