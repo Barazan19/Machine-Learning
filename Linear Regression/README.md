@@ -23,9 +23,10 @@ To compare our manual implementation, we use **Scikit-Learn’s `LinearRegressio
 
 Scikit-Learn uses a **closed-form solution** via the Normal Equation:
 
-\[
-\hat{\beta} = (X^TX)^{-1}X^Ty
-\]
+**Normal Equation** used in Scikit-Learn:
+
+> **β̂ = (XᵀX)⁻¹ Xᵀ y**
+
 
 This means it reaches the optimal result directly, without iteration.
 
