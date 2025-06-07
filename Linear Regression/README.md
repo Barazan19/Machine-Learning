@@ -1,65 +1,64 @@
-# 📘 Linear Regression with Gradient Descent (Real-Scale Data)
+# Linear Regression with and without Normalization using Gradient Descent
 
-This project demonstrates the fundamentals of **Linear Regression** using **Gradient Descent** on real insurance data. The key difference: we use the data **without normalization**, allowing for interpretation in real-world units (e.g., age in years, charges in USD).
-
----
-
-## 🔍 Highlights
-
-- 📈 Visualizes how the regression line fits the real-world dataset (`age` vs `charges`)
-- ⚙️ Uses gradient descent to iteratively update `w` (slope) and `b` (intercept)
-- 📉 Shows how MSE (Mean Squared Error) is minimized across epochs
-- 📊 Dual visualization per epoch:
-  - **Left plot:** Data points + current regression line
-  - **Right plot:** MSE vs `w` curve with:
-    - 🔴 Current `(w, MSE)` point
-    - 🟢 Tangent line (true slope at that point)
-    - 🔻 Historical gradient descent path
+This repository provides a step-by-step, visual, and intuitive exploration of **linear regression using gradient descent**, from scratch and with Scikit-Learn, along with experiments on normalization, hyperparameter tuning, and interactive visualizations.
 
 ---
 
-## 📐 Why Without Normalization?
+## 📁 File Overview
 
-- Interpret the model directly:  
-  _e.g., `charges = 2603.27 × age + 2377.45`_
-- Better intuition for how learning rate needs to adapt to real value ranges
-- Easier to explain to non-technical stakeholders
+### 1. [`The Idea of fitting a line to data.ipynb`](https://colab.research.google.com/drive/your_link_here)
+This notebook demonstrates **how gradient descent works manually** to fit a linear regression model, **without normalization**. It shows how we compute gradients, update weights, and minimize the Mean Squared Error (MSE) step by step.
 
----
+### 2. [`The Idea of fitting a line to data with normalization.ipynb`](https://colab.research.google.com/drive/your_link_here)
+Here we introduce **normalization** to the same process to see its **impact on convergence**. You’ll observe how scaling the feature (age) helps the gradient descent converge faster and more stably.
 
-## ⚠️ Important Note on Interactivity
+### 3. [`Interactive_Linear_Regression_Slider.ipynb`](https://colab.research.google.com/drive/your_link_here)
+An **interactive slider visualization** using `ipywidgets` that allows you to explore how the line changes over iterations. This is useful for visualizing the learning dynamics of gradient descent in real-time.
 
-> 🛑 **This notebook uses interactive sliders (`ipywidgets`)**, which **won’t run in GitHub preview**.
+### 4. [`The Idea of fitting a line to data with scikit-learn.ipynb`](https://colab.research.google.com/drive/your_link_here)
+To compare our manual implementation, we use **Scikit-Learn’s `LinearRegression`**. The result was noticeably different at first, most likely because:
+- The **learning rate** was too low
+- The **number of epochs** was too few
+- Manual gradient descent can stop early or converge to suboptimal values without proper tuning
 
-To see the visualization in action, please open the notebook with one of these:
+Scikit-Learn uses a **closed-form solution** via the Normal Equation:
 
-- ✅ **Jupyter Notebook** (local)
-- ✅ **VSCode** with the Jupyter extension
-- ✅ **Google Colab** (easy and fast)
+\[
+\hat{\beta} = (X^TX)^{-1}X^Ty
+\]
 
-### 🔗 Open in Colab  
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Barazan19/Machine-Learning/blob/main/Linear%20Regression/Interactive_Linear_Regression_Slider.ipynb)
+This means it reaches the optimal result directly, without iteration.
 
----
-
-## 🧪 Try It Yourself
-
-- 🔄 Use the **epoch slider** to watch the regression line and descent path update
-- 🔧 Modify learning rate (`lr`) or number of epochs to test convergence
-- 🧠 Observe how the tangent line and loss curve behave as training progresses
+### 5. [`The Idea of fitting a line to data adjusted epoch lr.ipynb`](https://colab.research.google.com/drive/your_link_here)
+In this final notebook, we **adjust the learning rate and epoch count** to improve the accuracy of our manual gradient descent. We also implement **early stopping** to prevent overfitting or excessive iterations. As a result, the model gets **much closer to Scikit-Learn’s output**.
 
 ---
 
-## 📂 Files
+## 📌 Summary
 
-- `The Idea of fitting a line to data.ipynb` : step by step on how to get final slope and intercept
-- `Interactive_Linear_Regression_Slider.ipynb`: interactive notebook with slider
-- `insurance.csv`: dataset used (real-world insurance data)
+| Notebook | Focus |
+|----------|-------|
+| `The Idea of fitting a line to data.ipynb` | Manual gradient descent without normalization |
+| `...with normalization.ipynb` | Impact of normalization |
+| `...Slider.ipynb` | Interactive visualization of gradient descent |
+| `...with scikit-learn.ipynb` | Comparison with closed-form solution |
+| `...adjusted epoch lr.ipynb` | Tuning learning rate and epochs for better results |
 
 ---
 
-## 📌 Preview
+## 🚀 Run in Google Colab
+
+To run these notebooks interactively in Google Colab, click the links above (or upload them to your own Google Drive and open with Colab).
 
 ---
 
-Made by [@Barazan19](https://github.com/Barazan19)
+## 📷 Sample Result
+
+![Visualization](assets/sample_plot.png) <!-- Optional: You can include a screenshot here -->
+
+---
+
+## 🧠 Author
+
+Made with ❤️ by [Your Name], to learn and visualize machine learning intuitively from first principles.
+
