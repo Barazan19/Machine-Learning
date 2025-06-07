@@ -1,9 +1,19 @@
-# Linear Regression with and without Normalization using Gradient Descent
+# Linear Regression
 
 This repository provides a step-by-step, visual, and intuitive exploration of **linear regression using gradient descent**, from scratch and with Scikit-Learn, along with experiments on normalization, hyperparameter tuning, and interactive visualizations.
 
 ---
 
+## 📚 Table of Contents
+
+- [📁 File Overview](#-file-overview)
+- [📌 Summary](#-summary)
+- [🚀 Run in Google Colab](#-run-in-google-colab)
+- [⚙️ Requirements](#️-requirements)
+- [📷 Sample Result](#-sample-result)
+- [🧠 Author](#-author)
+
+---
 ## 📁 File Overview
 
 ### 1. [`The Idea of fitting a line to data.ipynb`](https://colab.research.google.com/drive/your_link_here)
@@ -53,6 +63,16 @@ To run these notebooks interactively in Google Colab, click the links above (or 
 
 ---
 
+## ⚙️ Requirements
+
+numpy
+pandas
+matplotlib
+ipywidgets
+scikit-learn
+
+
+---
 ## 📷 Sample Result
 
 ![image](https://github.com/user-attachments/assets/b3234085-d336-4413-a73c-a93c86dd3c0d)
